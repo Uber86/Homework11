@@ -12,13 +12,14 @@ public class Main {
 
     // Задача №2
     public static void operatingSystem(int a, int b) {
-        if (a < 2015 && b == 1) {
+        int currentYear = LocalDate.now().getYear();
+        if (a < currentYear && b == 1) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        } else if (a >= 2015 && b == 1) {
+        } else if (a >= currentYear && b == 1) {
             System.out.println("Установите версию приложения для Android по ссылке");
-        } else if (a < 2015 && b == 0) {
+        } else if (a < currentYear && b == 0) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        } else if (a >= 2015 && b == 0){
+        } else if (a >= currentYear && b == 0){
             System.out.println("Установите версию приложения для iOS по ссылке");
         }
     }
@@ -28,15 +29,12 @@ public class Main {
         int day = 0;
         if (a >= 0 && a <= 20 ) {
             day += 1;
-            System.out.println("Потребуется дней: " + day);
         } else if (a > 20 && a <= 60) {
             day += 2;
-            System.out.println("Потребуется дней: " + day);
         } else if (a > 60 && a <= 100) {
             day += 3;
-            System.out.println("Потребуется дней: " + day);
         } else {
-            System.out.println("Доставки нет");
+            return Integer.parseInt("Доставки нет");
         }
         return day;
     }
@@ -51,17 +49,17 @@ public class Main {
         System.out.println();
 
         // Задача №2
-        int clientOS = 1;
-        //int clientDeviceYear = 2016;
-        int currentYear = LocalDate.now().getYear();
-        //operatingSystem(clientDeviceYear , clientOS);
-        operatingSystem(currentYear , clientOS);
+        int clientOS = 0;
+        int clientDeviceYear = 2024;
+        operatingSystem(clientDeviceYear , clientOS);
+
 
         System.out.println();
 
         // Задача №3
-        int deliveryDistance = 95;
-        deliveryDuration(deliveryDistance);
+        int deliveryDistance = 20;
+        int day = deliveryDuration(deliveryDistance);
+        System.out.println("Потребуется дней: " + day);
 
 
     }
