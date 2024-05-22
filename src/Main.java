@@ -10,20 +10,21 @@ public class Main {
 
     // Задача №2
     public static void operatingSystem(int a, int b) {
-        if (a < 2015 && b == 1) {
-            System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        }
-        if (a >= 2015 && b == 1) {
-            System.out.println("Установите версию приложения для Android по ссылке");
-        }
-        if (a < 2015 && b == 0) {
-            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        }
-        if (a >= 2015 && b == 0){
-            System.out.println("Установите версию приложения для iOS по ссылке");
-        }
         if ( b < 0 || b > 1) {
             System.out.println("Такой операционной системы нет");
+        }else {
+            if (a < 2015 && b == 1) {
+                System.out.println("Установите облегченную версию приложения для Android по ссылке");
+            }
+            if (a >= 2015 && b == 1) {
+                System.out.println("Установите версию приложения для Android по ссылке");
+            }
+            if (a < 2015 && b == 0) {
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+            }
+            if (a >= 2015 && b == 0) {
+                System.out.println("Установите версию приложения для iOS по ссылке");
+            }
         }
     }
 
