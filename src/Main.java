@@ -12,11 +12,14 @@ public class Main {
     public static void operatingSystem(int a, int b) {
         if (a < 2015 && b == 1) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        } else if (a >= 2015 && b == 1) {
+        }
+        if (a >= 2015 && b == 1) {
             System.out.println("Установите версию приложения для Android по ссылке");
-        } else if (a < 2015 && b == 0) {
+        }
+        if (a < 2015 && b == 0) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        } else if (a >= 2015 && b == 0){
+        }
+        if (a >= 2015 && b == 0){
             System.out.println("Установите версию приложения для iOS по ссылке");
         }
     }
@@ -57,8 +60,7 @@ public class Main {
         System.out.println();
 
         // Задача №3
-        int distans = 90;
-        int days = deliveryDuration(distans);
+        int days = deliveryDuration(90);
         if (days > 0) {
             System.out.println("Потребуется дней: " + days);
         } else {
