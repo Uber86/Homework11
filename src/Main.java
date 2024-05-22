@@ -26,7 +26,6 @@ public class Main {
             if (a == currentYear && b == 0) {
                 System.out.println("Установите версию приложения для iOS по ссылке");
             }
-
         } else {
             System.out.println("Такой операционной системы нет");
         }
@@ -68,7 +67,6 @@ public class Main {
         System.out.println();
 
         // Задача №3
-
         int distans = deliveryDuration(19);
         var deliviry = distans > 0 ? "Потребуется дней: " + distans : "Доставки нет";
         System.out.println(deliviry);
