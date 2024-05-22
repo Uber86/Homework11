@@ -1,5 +1,3 @@
-import java.time.LocalDate;
-
 public class Main {
     // Задача №1
     public static void leapYear (int a){
