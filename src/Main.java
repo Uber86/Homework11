@@ -22,6 +22,9 @@ public class Main {
         if (a >= 2015 && b == 0){
             System.out.println("Установите версию приложения для iOS по ссылке");
         }
+        if ( b < 0 || b > 1) {
+            System.out.println("Такой операционной системы нет");
+        }
     }
 
     // Задача №3
@@ -30,10 +33,10 @@ public class Main {
             return -1 ;
         }
         int day = 1;
-        if (a > 20 ) {
+        if (a >= 20 ) {
             day++;
         }
-        if (a > 60) {
+        if (a >= 60) {
             day++;
         }
         return day;
@@ -52,15 +55,16 @@ public class Main {
         System.out.println();
 
         // Задача №2
-        int clientOS = 0;
-        int clientDeviceYear = 2015;
+        int clientOS = 2;
+        int clientDeviceYear = 2014;
         operatingSystem(clientDeviceYear , clientOS);
 
 
         System.out.println();
 
         // Задача №3
-        int days = deliveryDuration(90);
+
+        int days = deliveryDuration(60);
         if (days > 0) {
             System.out.println("Потребуется дней: " + days);
         } else {
