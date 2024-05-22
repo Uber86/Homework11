@@ -72,7 +72,6 @@ public class Main {
         var deliviry = distans > 0 ? "Потребуется дней: " + distans : "Доставки нет";
         System.out.println(deliviry);
 
-
     }
 
 }
