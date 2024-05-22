@@ -38,14 +38,13 @@ public class Main {
         }
         int day = 0;
         if (a >= 0) {
-            day += 1;
+            ++day;
         }
         if (a >= 20) {
-            day += 1;
+            ++day;
         }
         if (a >= 60) {
-            day += 1;
-
+            ++day;
         }
         return day;
     }
@@ -67,7 +66,7 @@ public class Main {
         System.out.println();
 
         // Задача №3
-        int distans = deliveryDuration(19);
+        int distans = deliveryDuration(10);
         var deliviry = distans > 0 ? "Потребуется дней: " + distans : "Доставки нет";
         System.out.println(deliviry);
 
