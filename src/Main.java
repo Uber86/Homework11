@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Main {
     // Задача №1
     public static void leapYear (int a){
@@ -10,19 +12,20 @@ public class Main {
 
     // Задача №2
     public static void operatingSystem(int a, int b) {
+        int currentYear = LocalDate.now().getYear();
         if ( b < 0 || b > 1) {
             System.out.println("Такой операционной системы нет");
         }else {
-            if (a < 2015 && b == 1) {
+            if (a < currentYear && b == 1) {
                 System.out.println("Установите облегченную версию приложения для Android по ссылке");
             }
-            if (a >= 2015 && b == 1) {
+            if (a == currentYear && b == 1) {// я поменял а>=currentYear т.к currentYear это текущее время . Получается если оно будет больше то это операционная система из будущего и ей нет смысла устанавливать прошлую версию )
                 System.out.println("Установите версию приложения для Android по ссылке");
             }
-            if (a < 2015 && b == 0) {
+            if (a < currentYear && b == 0) {
                 System.out.println("Установите облегченную версию приложения для iOS по ссылке");
             }
-            if (a >= 2015 && b == 0) {
+            if (a == currentYear && b == 0) {
                 System.out.println("Установите версию приложения для iOS по ссылке");
             }
         }
@@ -56,8 +59,8 @@ public class Main {
         System.out.println();
 
         // Задача №2
-        int clientOS = 2;
-        int clientDeviceYear = 2014;
+        int clientOS = 1;
+        int clientDeviceYear = 2023;
         operatingSystem(clientDeviceYear , clientOS);
 
 
@@ -65,12 +68,9 @@ public class Main {
 
         // Задача №3
 
-        int days = deliveryDuration(60);
-        if (days > 0) {
-            System.out.println("Потребуется дней: " + days);
-        } else {
-            System.out.println("Доставки нет");
-        }
+        int distans = deliveryDuration(20);
+        var deliviry = distans > 0 ? "Потребуется дней: " + distans : "Доставки нет";
+        System.out.println(deliviry);
 
 
     }
