@@ -12,18 +12,18 @@ public class Main {
 
     // Задача №2
     public static void operatingSystem(int a, int b) {
-        int currentYear = LocalDate.now().getYear();
+
         if (b == 0 || b == 1) {
-            if (a < currentYear && b == 1) {
+            if (a < LocalDate.now().getYear() && b == 1) {
                 System.out.println("Установите облегченную версию приложения для Android по ссылке");
             }
-            if (a == currentYear && b == 1) {
+            if (a == LocalDate.now().getYear() && b == 1) {
                 System.out.println("Установите версию приложения для Android по ссылке");
             }
-            if (a < currentYear && b == 0) {
+            if (a < LocalDate.now().getYear() && b == 0) {
                 System.out.println("Установите облегченную версию приложения для iOS по ссылке");
             }
-            if (a == currentYear && b == 0) {
+            if (a == LocalDate.now().getYear() && b == 0) {
                 System.out.println("Установите версию приложения для iOS по ссылке");
             }
         } else if (b != 0 || b != 1) {
@@ -37,15 +37,9 @@ public class Main {
             return -1;
         }
         int day = 0;
-        if (a >= 0) {
-            ++day;
-        }
-        if (a >= 20) {
-            ++day;
-        }
-        if (a >= 60) {
-            ++day;
-        }
+        int dayOne = a >=0 ? ++day : day--;
+        int dayTwo = a >=20 ? ++day : day--;
+        int dayThree = a >=60 ? ++day : day--;
         return day;
     }
 
@@ -58,7 +52,7 @@ public class Main {
         System.out.println();
 
         // Задача №2
-        int clientOS = 2;
+        int clientOS = 0;
         int clientDeviceYear = 2023;
         operatingSystem(clientDeviceYear, clientOS);
 
@@ -66,7 +60,7 @@ public class Main {
         System.out.println();
 
         // Задача №3
-        int distans = deliveryDuration(10);
+        int distans = deliveryDuration(101);
         var deliviry = distans > 0 ? "Потребуется дней: " + distans : "Доставки нет";
         System.out.println(deliviry);
 
