@@ -26,8 +26,8 @@ public class Main {
             if (a == currentYear && b == 0) {
                 System.out.println("Установите версию приложения для iOS по ссылке");
             }
-        } else {
-            System.out.println("Такой операционной системы нет");
+        } else if (b != 0 || b != 1) {
+            throw new RuntimeException("Ошибка ввода. Такой операционной системы нет");
         }
     }
 
